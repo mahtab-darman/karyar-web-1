@@ -1,0 +1,401 @@
+*{margin: 0;padding: 0;box-sizing: border-box;scroll-behavior:smooth;}
+
+::selection {background-color: #efbb20;color: #ffffff;}
+  :root{
+    --primary-color : #efbb20;
+    --second-color : #2C353D;
+    --new-style:.special_amp {
+        font-family: "Baskerville", "Palatino Linotype", "Palatino", "Times New Roman", serif;
+        font-style: italic;
+        font-size: 1.3em;
+        line-height: 0.5em;
+        font-weight: normal;
+        color: var(--primary-color);
+      }
+  }
+  .new-style {
+    font-family: "Baskerville", "Palatino Linotype", "Palatino", "Times New Roman", serif;
+    font-style: italic;
+    font-size: 1.3em;
+    line-height: 0.5em;
+    font-weight: normal;
+    color: var(--primary-color);
+  }
+  .white{color: white;}
+
+@font-face {
+    font-family: main-font;
+    src: url(fonts/sJoA3LZUhMSAPV_u0qwiAQ-O5X8.woff2);
+}
+body{font-family: main-font; position: relative;}
+
+/* ------------------------------------header --------------------------------------------------- */
+header{width: 100%;height: 140px;}
+.navigation{width: 100%;height: 90px;}
+.inner-div{
+    width: 90%;
+    height: 90px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+width: 20%;
+height: 90px;
+background-image: url(images/logo-construction.png);
+background-size: cover;
+background-position: center;}
+.social-media{width: 5%;display: flex;justify-content: space-around;}
+.social-media a{font-size: 16px;}
+.twitter{
+    color:gray;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+.twitter:hover{background-color: rgb(77, 187, 238);color: white;transition: 0.5s;}
+.dribbble{
+    color:gray;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+.dribbble:hover{background-color: rgb(218, 85, 129);color: white;transition: 0.5s;}
+.menu-item{background-color: #2C353D;height: 50px;width: 100%;}
+.menu-item ul{display:flex;margin-left:80px;}
+.menu-item ul li{
+    display: inline-block;
+    line-height: 50px;
+    text-transform: capitalize;
+    border-left: 1px solid rgba(39, 39, 39, 0.555);
+    padding: 0 15px;
+}
+.menu-item ul li>a{font-size: 14px;text-decoration: none;}
+.menu-item li:last-child{margin-left: 480px;border-right: 1px solid rgba(39, 39, 39, 0.555);}
+.menu-item a>i{font-size: 30px;padding-top: 15px;}
+.checkbtn{
+    font-size: 30px;
+    float: right;
+    line-height: 50px;
+    margin-right: 50px;
+    cursor: pointer;
+    display: none;
+}
+#check{display: none;}
+/* -------------------------------------banner-------------------------------------------------.. */
+.banner{
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.432),rgba(0, 0, 0, 0.432)),url(images/house-interior-1500x863.jpg);
+    background-position: center -200px;
+    background-size: cover;
+    position: relative;
+}
+.banner h1{
+    font: inherit;
+    font-size: 40px;
+    text-transform: capitalize;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.banner h1::after{
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 43%;
+    border-bottom: 2px solid var(--primary-color);
+    width: 12%;
+}
+.banner i{
+    text-decoration: none;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,0);
+    font-size: 55px;
+}
+.slide-top {animation: slide-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite reverse both;}
+/* 
+ * ----------------------------------------
+ * animation slide-top
+ * ---------------------------------------- 
+ */
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+              opacity: 50%;
+    }
+  }
+/* ------------------------------first grid ---------------------------------- */
+.first-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.planning-pic{
+    background-image: url(images/house-mansion-705x472.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.kitchen-pic{
+    background-image: url(images/modern-kitchen-845x684.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.planning-text,.kitchen-text{padding: 150px 50px;}
+.planning-text h4,.kitchen-text h4{position: relative;font: inherit;font-size: 22px;color: var(--second-color);}
+.planning-text p,.kitchen-text p{color: gray;margin-top: 45px;font-size: 17px;}
+.planning-text h4::after{
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    border-bottom: 2px solid var(--primary-color);
+    width: 10%;
+}
+.kitchen-text h4::after{
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    border-bottom: 2px solid var(--primary-color);
+    width: 10%;
+}
+/* -----------------------------count down-------------------------------------------- */
+.count-down{width: 100%;height:30vh ;background-color: var(--second-color);}
+.count-down ul{display: flex;flex-direction: row;padding: 40px 70px;}
+.count-down li{
+    font-size: 40px;
+    list-style-type: none;
+    margin: 0px 62px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.count-down li>div{font-size: 14px;text-transform: capitalize;}
+/* --------------------------------second grid ---------------------------------------------- */
+.second-grid{display: grid;grid-template-columns: auto auto;}
+.light-shadow-pic{
+    background-image: url(images/superb-backyard-705x454.jpg);
+    background-position: center;
+    background-size: cover;}
+.kitchen2-pic{
+    background-image: url(images/modern-kitchen-845x684.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.light-shadow-text,.kitchen2-text{padding: 150px 50px;}
+.light-shadow-text h4,.kitchen2-text h4{position: relative;font: inherit;font-size: 22px;color: var(--second-color);}
+.light-shadow-text p,.kitchen2-text p{color: gray;margin-top: 45px;font-size: 17px;}
+.light-shadow-text h4::after{
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    border-bottom: 2px solid var(--primary-color);
+    width: 10%;
+}
+.kitchen2-text h4::after{
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    border-bottom: 2px solid var(--primary-color);
+    width: 10%;
+}
+/* -------------------------------footer------------------------------------------------------ */
+footer{width: 100%;height: 350px;background-color: var(--second-color);position: relative;}
+.footer-flex{
+    width: 95%;
+    height: 70%;
+    padding: 50px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,0);
+    display: flex;
+    justify-content: space-between;
+}
+.footer-flex>div{width: 23%;height: 100%;padding: 5px;}
+.Interesting-Infos{float: left;}
+
+/* ===================footer sections========================= */
+.Interesting-Infos h3{
+    padding: 5px 0;
+    text-transform: uppercase;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+.Interesting-Infos p{margin-bottom: 50px;margin-top: 6px;}
+.Interesting-Infos small{font-size: 10px;}
+
+/* ===================================================== */
+.Enfold-Construction h3{
+    padding: 5px 0;
+    text-transform: uppercase;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+.Enfold-Construction small{font-size: 10px;}
+/* ========================================================= */
+.Office-Hours h3{
+    padding: 5px 0;
+    text-transform: uppercase;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+.Office-Hours small{font-size: 10px;}
+/* ============================================================ */
+.Latest-Projects h3{
+    padding: 5px 0;
+    text-transform: uppercase;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+.Latest-Projects small{font-size: 10px;}
+/* ---------------------------------------------------------------- */
+.last-living-room,.last-more-interior,.last-office-tower{
+    display: flex;
+    margin: 20px 0;
+    font-size: 16px;
+}
+.last-living-room>div,.last-more-interior>div,.last-office-tower>div{
+    display: flex;
+    flex-direction: column;
+    line-height: 15px;
+    text-transform: capitalize;
+}
+/* =======================footer copyright section =============================== */
+footer{position: relative;}
+footer .copyright{
+    width: 100%;
+    height: 18%;
+    font-size: 13px;
+    padding: 0 35px;
+    position: absolute;
+    top: 100%;
+    background-color: #5B646B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.copyright ul{
+    font-size: 13px;
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    text-transform: capitalize;
+    color: white;
+}
+.copyright ul a{
+    text-decoration: none;
+    margin: 0 10px;
+}
+/* ----------------------------scroll to the top + bring to first page----------------------------- */
+#scroll-to-top {
+    display: inline-block;
+    position: sticky;
+    bottom: 2%;
+    left: 100%;
+    transform: translate(-80%,0);
+    padding: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.445);
+    background-color: rgba(104, 100, 100, 0.61);
+    z-index: 100;
+  }
+  #scroll-to-top:hover{background-color: #ffffff69;transition: 0.5s;}
+
+  #move-to-home{
+    display: inline-block;
+    text-decoration: none;
+    position: fixed;
+    bottom: 50%;
+    left: 0%;
+    transform: translate(0,100%);
+    padding: 50px 10px;
+    color: #ffffff62;
+    border: 1px solid rgba(128, 128, 128, 0.301);
+    background-color: rgba(104, 100, 100, 0.288);
+    z-index: 100;
+  }
+  #move-to-home::after{
+    width: 200px;
+    content:' Enfold project';
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    opacity: 0;
+
+  }
+  #move-to-home:hover{background-color: #000000cc;transition: 0.5s;color: white;}
+  #move-to-home:hover::after{position: relative;opacity: 1;}
+/* ========================================================================================================= */
+@media (max-width:767px){      /*mobile view*/
+
+    .logo {width: 41%;background-size: contain;background-repeat: no-repeat;}
+    .checkbtn{display: block;}
+    .menu-item{position: relative;}
+    .menu-item ul{
+        position: absolute;
+        top: 100%;
+        right: -90%;
+        width: 50%;
+        transition: all .5s;
+        height: 50vh;
+        background-color:#2f3f4e;
+        margin-left:0;
+        z-index: 1000;
+        float: none;
+        display: none;
+    }
+    .menu-item li{width: 100%;display: inline-block;text-align: center;padding: 0 auto;line-height: 60px;}
+    .menu-item li:hover{background-color:#234a6e;}
+    #check:checked ~ ul{right: 0;display:block;}
+    .banner{height: 40vh;background-position: center 0px;}
+    .banner h1 {font-size: 35px;text-align: center;}
+    .first-grid{grid-template-columns: auto;}
+    .planning-pic,.kitchen-pic {width: 100%;height: 270px;}
+    .planning-text, .kitchen-text {padding: 26px 50px;}
+    .count-down {height: 50vh;}
+    .count-down ul {flex-direction: column;padding: 10px 70px;}
+    .count-down li {margin: 10px 54px;font-size: 30px;}
+    .second-grid{grid-template-columns: auto;}
+    .light-shadow-pic,.kitchen2-pic {width: 100%;height: 270px;}
+    .light-shadow-text, .kitchen2-text {padding: 26px 50px;}
+    footer{height: 900px;}
+    .footer-flex{flex-direction: column;width: 100%;padding: 30px;top: 0%;}
+    .footer-flex > div {width: 100%;height: 100%;padding: 5px;}
+    footer .copyright {width: 100%;height: 8%;font-size: 10px;flex-direction: column;justify-content: space-around;}
+    .copyright ul li{margin: 5px;}
+    .copyright ul, li, a{justify-content: center;}
+
+}
+@media (min-width:768px) and (max-width:1024px){ /*tablet view*/
+    .logo {width: 30%;}
+    .menu-item ul {margin-left: 50px;}
+    .menu-item li:last-child {margin-left:50px;margin-top:10px;margin-left: 80px;border: none;}
+    .menu-item a>i{font-size: 25px;padding-top: 0px;}
+    .banner{height: 40vh;background-position:unset;}
+    .banner h1 {text-align: center;}
+    .count-down{height: 20vh;}
+    .count-down ul {display: flex;flex-direction: row;padding: 40px 0px;}
+    .count-down li {font-size: 40px;margin: 0px 10px;}
+    footer{height: 900px;}
+    .footer-flex{flex-direction: column;width: 100%;padding: 30px;top: 0%;}
+    .footer-flex > div {width: 100%;height: 100%;padding: 5px;}
+    footer .copyright {width: 100%;height: 8%;font-size: 10px;flex-direction: column;justify-content: space-around;}
+    .copyright ul li{margin: 5px;}
+    .copyright ul, li, a{justify-content: center;}
+}
